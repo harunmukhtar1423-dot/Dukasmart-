@@ -7,6 +7,7 @@ import { initDatabase } from './src/services/database';
 import { useStore } from './src/stores/useStore';
 import db from './src/services/database';
 import { v4 as uuidv4 } from 'uuid';
+import { testSupabaseConnection } from './src/supabaseClient';
 
 export default function App() {
   const [isReady, setIsReady] = useState(false);
@@ -44,6 +45,15 @@ export default function App() {
           });
         } else {
           setCurrentStore(stores[0]);
+        }
+
+        // Test Supabase connection
+        console.log('🔄 Testing Supabase connection...');
+        const result = await testSupabaseConnection();
+        if (result.success) {
+          console.log('✅ Supabase is connected and ready!');
+        } else {
+          console.warn('⚠️ Supabase connection test failed:', result.error);
         }
 
         setIsReady(true);
