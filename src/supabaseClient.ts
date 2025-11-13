@@ -1,8 +1,15 @@
 import { createClient } from '@supabase/supabase-js';
+import Constants from 'expo-constants';
 
-// Supabase configuration
-const SUPABASE_URL = 'https://bwrmrbegjiunfitaemvz.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3cm1yYmVnaml1bmZpdGFlbXZ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwMjcyMDQsImV4cCI6MjA3ODYwMzIwNH0.M02h2En7L0sAFGNYLPsQNQJmMPvJWz6Z0h96_nJbK74';
+// Get Supabase configuration from environment variables
+const SUPABASE_URL = Constants.expoConfig?.extra?.supabaseUrl || '';
+const SUPABASE_ANON_KEY = Constants.expoConfig?.extra?.supabaseAnonKey || '';
+
+// Validate configuration
+if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
+  console.error('❌ Supabase configuration missing! Please check your .env file.');
+  console.error('Expected: SUPABASE_URL and SUPABASE_ANON_KEY');
+}
 
 // Initialize Supabase client
 export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
