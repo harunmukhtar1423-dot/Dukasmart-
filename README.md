@@ -36,14 +36,66 @@ A comprehensive mobile application for managing small to medium-sized retail sho
   - WhatsApp integration for quick messaging
   - Direct call functionality
 
-### Additional Features (Coming Soon)
+### Additional Features
 - **Supplier Management** - Track and manage suppliers
+  - Complete supplier database with CRUD operations
+  - Contact information and company details
+  - WhatsApp, call, and email integration
+
 - **Sales Analytics** - Detailed sales reports and charts
+  - Interactive charts (Line, Bar, Pie charts)
+  - Sales trends over 7, 30, or 90 days
+  - Revenue analysis and tracking
+  - Top selling products
+  - Category distribution
+
 - **Debt Calculator** - Calculate and manage customer debts
+  - Track all customer debts
+  - Record debt payments
+  - Multiple payment methods
+  - Debt status tracking (active, paid, overdue)
+  - Automatic customer debt updates
+
 - **Todo List** - Task management for daily operations
+  - Create and manage tasks
+  - Priority levels (low, medium, high)
+  - Due dates and completion tracking
+  - Filter by status
+
 - **Calculator** - Built-in calculator tool
+  - Full-featured calculator
+  - Basic operations (+, -, ×, ÷, %)
+  - Clean interface for quick calculations
+
+- **Barcode Scanner** - Product scanning functionality
+  - Scan product barcodes
+  - Quick product lookup
+  - Camera permission handling
+
 - **Multi-store Support** - Manage multiple store locations
-- **Backup & Restore** - Data backup functionality
+  - Switch between stores
+  - Store-specific data isolation
+  - Store management (add, edit, delete)
+  - Multi-currency support
+
+- **Backup & Restore** - Data backup and export
+  - Export all data to JSON
+  - Share backups via any app
+  - Import from backup (info provided)
+  - Clear data functionality
+
+- **Advanced Reporting** - Comprehensive business reports
+  - Sales reports
+  - Inventory reports
+  - Customer reports
+  - Financial reports
+  - Export as text files
+
+- **Receipt Printing/Sharing** - Professional receipts
+  - Generate PDF receipts
+  - Print receipts
+  - Share via email, messaging apps
+  - Detailed transaction information
 
 ## Technology Stack
 
@@ -209,26 +261,34 @@ eas build --platform ios
 
 ## Roadmap
 
-### Version 1.1
-- [ ] Supplier management screen
-- [ ] Sales analytics with charts
-- [ ] Debt calculator tool
-- [ ] Todo list functionality
-- [ ] Built-in calculator
+### Version 2.0 (Current) ✅
+- [x] Supplier management screen
+- [x] Sales analytics with charts
+- [x] Debt calculator tool
+- [x] Todo list functionality
+- [x] Built-in calculator
+- [x] Receipt printing/sharing
+- [x] Barcode scanning
+- [x] Multi-currency support (via multi-store)
+- [x] Export data (JSON, TXT reports)
+- [x] Advanced reporting
+- [x] Multi-store management
+- [x] Backup & restore functionality
 
-### Version 1.2
-- [ ] Receipt printing/sharing
-- [ ] Barcode scanning
-- [ ] Multi-currency support
-- [ ] Export data (CSV, PDF)
-- [ ] Advanced reporting
+### Version 2.1 (Planned)
+- [ ] Cloud sync (Google Drive, Dropbox)
+- [ ] Offline-first with auto-sync
+- [ ] Enhanced receipt templates
+- [ ] Product variants support
+- [ ] Purchase orders management
 
-### Version 2.0
-- [ ] Cloud sync
-- [ ] Multi-store management
+### Version 3.0 (Future)
 - [ ] User roles and permissions
 - [ ] Email integration
 - [ ] Advanced analytics with AI insights
+- [ ] Predictive stock management
+- [ ] Customer loyalty programs
+- [ ] Online store integration
 
 ## Contributing
 

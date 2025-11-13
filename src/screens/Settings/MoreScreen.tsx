@@ -11,7 +11,7 @@ interface MenuItem {
 }
 
 export default function MoreScreen() {
-  const navigation = useNavigation();
+  const navigation = useNavigation<any>();
 
   const menuSections = [
     {
@@ -22,8 +22,7 @@ export default function MoreScreen() {
           icon: 'truck',
           color: '#2196F3',
           onPress: () => {
-            // Will navigate to suppliers screen
-            console.log('Navigate to Suppliers');
+            navigation.navigate('Suppliers');
           },
         },
         {
@@ -31,15 +30,23 @@ export default function MoreScreen() {
           icon: 'chart-bar',
           color: '#4CAF50',
           onPress: () => {
-            console.log('Navigate to Analytics');
+            navigation.navigate('Analytics');
           },
         },
         {
-          title: 'Debt Management',
+          title: 'Debt Calculator',
           icon: 'account-cash',
           color: '#F44336',
           onPress: () => {
-            console.log('Navigate to Debt Management');
+            navigation.navigate('DebtCalculator');
+          },
+        },
+        {
+          title: 'Reports',
+          icon: 'file-document',
+          color: '#009688',
+          onPress: () => {
+            navigation.navigate('Reports');
           },
         },
       ],
@@ -52,7 +59,7 @@ export default function MoreScreen() {
           icon: 'calculator',
           color: '#9C27B0',
           onPress: () => {
-            console.log('Navigate to Calculator');
+            navigation.navigate('Calculator');
           },
         },
         {
@@ -60,7 +67,15 @@ export default function MoreScreen() {
           icon: 'checkbox-marked-circle',
           color: '#FF9800',
           onPress: () => {
-            console.log('Navigate to Todo List');
+            navigation.navigate('TodoList');
+          },
+        },
+        {
+          title: 'Barcode Scanner',
+          icon: 'barcode-scan',
+          color: '#E91E63',
+          onPress: () => {
+            navigation.navigate('BarcodeScanner');
           },
         },
       ],
@@ -69,11 +84,11 @@ export default function MoreScreen() {
       title: 'Settings',
       items: [
         {
-          title: 'Store Settings',
+          title: 'Multi-Store',
           icon: 'store-cog',
           color: '#607D8B',
           onPress: () => {
-            console.log('Navigate to Store Settings');
+            navigation.navigate('MultiStore');
           },
         },
         {
@@ -81,7 +96,7 @@ export default function MoreScreen() {
           icon: 'backup-restore',
           color: '#00BCD4',
           onPress: () => {
-            console.log('Navigate to Backup');
+            navigation.navigate('Backup');
           },
         },
         {
@@ -89,7 +104,7 @@ export default function MoreScreen() {
           icon: 'information',
           color: '#795548',
           onPress: () => {
-            console.log('Navigate to About');
+            navigation.navigate('About');
           },
         },
       ],
